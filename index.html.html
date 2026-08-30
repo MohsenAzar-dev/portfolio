@@ -1,0 +1,1346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mohsen Azar — Frontend Developer in Tehran. Seven years building web interfaces, most recently owning Special Margin, the flagship leveraged-trading product at Tabdeal, Iran's largest crypto exchange.">
+<meta name="author" content="Mohsen Azar">
+<meta name="theme-color" content="#F1F4F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1016" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mohsen Azar — Frontend Developer">
+<meta property="og:description" content="Seven years building web interfaces. Owner of Special Margin, the flagship leveraged-trading product at Tabdeal, Iran's largest crypto exchange.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mohsen Azar — Frontend Developer">
+<meta name="twitter:description" content="Seven years building web interfaces. Owner of Special Margin at Tabdeal, Iran's largest crypto exchange.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%88%3C/text%3E%3C/svg%3E">
+
+<title>Mohsen Azar</title>
+<!-- Self-hosted fonts: no external requests. Put the .woff2 files in ./fonts/ -->
+<style>
+  @font-face{font-family:'Archivo';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/archivo-600.woff2') format('woff2');}
+  @font-face{font-family:'Archivo';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/archivo-700.woff2') format('woff2');}
+  @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/ibm-plex-sans-400.woff2') format('woff2');}
+  @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/ibm-plex-sans-500.woff2') format('woff2');}
+  @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/ibm-plex-sans-600.woff2') format('woff2');}
+  @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/ibm-plex-mono-400.woff2') format('woff2');}
+  @font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/ibm-plex-mono-500.woff2') format('woff2');}
+</style>
+
+<style>
+  /* ============ tokens — light is the base ============ */
+  :root {
+    --ground:    #F1F4F7;
+    --ground-2:  #E7ECF1;
+    --surface:   #FFFFFF;
+    --surface-2: #EAEEF3;
+    --ink:       #0E141A;
+    --ink-soft:  #2A3642;
+    --muted:     #5B6978;
+    --faint:     #93A0AD;
+    --rule:      #D5DCE4;
+    --rule-soft: #E4E9EF;
+    --accent:    #A0601F;
+    --accent-2:  #C88A3E;
+    --accent-soft: #F1E5D7;
+    --up:        #1C6E5A;
+    --down:      #A6423A;
+    --grid:      rgba(14,20,26,.055);
+    --shadow:    0 1px 2px rgba(14,20,26,.05), 0 14px 36px -20px rgba(14,20,26,.30);
+    --shadow-lift: 0 2px 4px rgba(14,20,26,.06), 0 26px 50px -26px rgba(14,20,26,.42);
+
+    --measure: 66ch;
+    --step--2: .72rem;
+    --step--1: clamp(.78rem, .76rem + .1vw, .845rem);
+    --step-0:  clamp(1rem, .97rem + .16vw, 1.08rem);
+    --step-1:  clamp(1.18rem, 1.1rem + .35vw, 1.42rem);
+    --step-2:  clamp(1.55rem, 1.36rem + .82vw, 2.1rem);
+    --step-3:  clamp(2.5rem, 1.85rem + 2.8vw, 4.6rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:    #0B1016;
+      --ground-2:  #0F161D;
+      --surface:   #131B23;
+      --surface-2: #1A232D;
+      --ink:       #EAEEF2;
+      --ink-soft:  #C2CCD6;
+      --muted:     #8A97A5;
+      --faint:     #64707D;
+      --rule:      #253039;
+      --rule-soft: #1C252E;
+      --accent:    #DDA059;
+      --accent-2:  #C4813C;
+      --accent-soft: #2B2118;
+      --up:        #4EBB9C;
+      --down:      #D4715F;
+      --grid:      rgba(234,238,242,.05);
+      --shadow:    0 1px 2px rgba(0,0,0,.45), 0 18px 44px -24px rgba(0,0,0,.85);
+      --shadow-lift: 0 2px 6px rgba(0,0,0,.5), 0 30px 60px -28px rgba(0,0,0,.95);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:    #0B1016;
+    --ground-2:  #0F161D;
+    --surface:   #131B23;
+    --surface-2: #1A232D;
+    --ink:       #EAEEF2;
+    --ink-soft:  #C2CCD6;
+    --muted:     #8A97A5;
+    --faint:     #64707D;
+    --rule:      #253039;
+    --rule-soft: #1C252E;
+    --accent:    #DDA059;
+    --accent-2:  #C4813C;
+    --accent-soft: #2B2118;
+    --up:        #4EBB9C;
+    --down:      #D4715F;
+    --grid:      rgba(234,238,242,.05);
+    --shadow:    0 1px 2px rgba(0,0,0,.45), 0 18px 44px -24px rgba(0,0,0,.85);
+    --shadow-lift: 0 2px 6px rgba(0,0,0,.5), 0 30px 60px -28px rgba(0,0,0,.95);
+  }
+
+  /* ============ base ============ */
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+  h1, h2, h3 { margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+
+  .wrap {
+    max-width: 63rem;
+    margin: 0 auto;
+    padding: 0 clamp(1.15rem, 4vw, 2.5rem) 4rem;
+  }
+
+  .mono, .label {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .label {
+    font-size: var(--step--1);
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+
+  /* ============ reveal system ============ */
+  .rv {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);
+    transition-delay: var(--d, 0ms);
+  }
+  .rv.in { opacity: 1; transform: none; }
+
+  /* ============ theme toggle ============ */
+  .themebar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    justify-content: flex-end;
+    padding: .9rem clamp(1.15rem, 4vw, 2.5rem);
+    pointer-events: none;
+  }
+  .themebtn {
+    pointer-events: auto;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--step--2);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: color-mix(in srgb, var(--surface) 80%, transparent);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: .38rem .8rem;
+    cursor: pointer;
+    transition: color .2s ease, border-color .2s ease;
+  }
+  .themebtn:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ============ hero ============ */
+  .hero {
+    position: relative;
+    padding: clamp(1rem, 3vw, 2rem) 0 clamp(2.4rem, 5vw, 3.4rem);
+    border-bottom: 1px solid var(--rule);
+  }
+  #tape {
+    position: absolute;
+    inset: -2rem -50vw auto -50vw;
+    width: 200vw;
+    height: 100%;
+    min-height: 22rem;
+    z-index: 0;
+    opacity: .9;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 62%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 62%, transparent);
+  }
+  .hero > *:not(#tape) { position: relative; z-index: 1; }
+
+  .eyebrow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem 1.2rem;
+    margin-bottom: clamp(1.2rem, 3vw, 2rem);
+  }
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--step--1);
+    letter-spacing: .05em;
+    color: var(--up);
+  }
+  .dot {
+    width: .5rem; height: .5rem; border-radius: 50%;
+    background: var(--up);
+    position: relative;
+  }
+  .dot::after {
+    content: "";
+    position: absolute; inset: 0;
+    border-radius: 50%;
+    background: var(--up);
+    animation: pulse 2.6s ease-out infinite;
+  }
+  @keyframes pulse {
+    0%   { transform: scale(1);   opacity: .55; }
+    70%  { transform: scale(3.2); opacity: 0; }
+    100% { transform: scale(3.2); opacity: 0; }
+  }
+
+  h1 {
+    font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: var(--step-3);
+    line-height: .93;
+    letter-spacing: -.038em;
+  }
+  h1 span { display: block; overflow: hidden; }
+  h1 span i {
+    display: block;
+    font-style: normal;
+    transform: translateY(105%);
+    animation: riseIn .95s cubic-bezier(.19,1,.22,1) forwards;
+  }
+  h1 .family i {
+    color: var(--accent);
+    animation-delay: .12s;
+  }
+  @keyframes riseIn { to { transform: none; } }
+
+  .lede {
+    max-width: var(--measure);
+    font-size: var(--step-1);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin-top: 1.4rem;
+  }
+  .lede strong {
+    font-weight: 600;
+    color: var(--ink);
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-repeat: no-repeat;
+    background-position: 0 92%;
+    background-size: 0% 1.5px;
+    animation: underline .8s cubic-bezier(.22,.61,.36,1) forwards;
+  }
+  .lede strong:nth-of-type(1) { animation-delay: 1.05s; }
+  .lede strong:nth-of-type(2) { animation-delay: 1.25s; }
+  @keyframes underline { to { background-size: 100% 1.5px; } }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: 1.6rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--step--1);
+  }
+  .contact a {
+    text-decoration: none;
+    padding: .42rem .85rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    color: var(--ink-soft);
+    background: color-mix(in srgb, var(--surface) 78%, transparent);
+    backdrop-filter: blur(6px);
+    transition: border-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease;
+  }
+  .contact a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+
+  /* ============ ticker ============ */
+  .ticker {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    margin-top: clamp(1.8rem, 4vw, 2.6rem);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .tick {
+    padding: 1rem 1.15rem;
+    display: grid;
+    gap: .2rem;
+    border-right: 1px solid var(--rule-soft);
+    position: relative;
+  }
+  .tick:last-child { border-right: 0; }
+  .tick::before {
+    content: "";
+    position: absolute; left: 0; right: 0; top: 0;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .8s cubic-bezier(.22,.61,.36,1);
+    transition-delay: var(--d, 0ms);
+  }
+  .ticker.in .tick::before { transform: scaleX(1); }
+  .tick .k {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--step--2);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  .tick .v {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: -.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .tick .v .arrow { color: var(--up); font-size: .78em; }
+  .tick .v .arrow.dn { color: var(--down); }
+
+  /* ============ sections ============ */
+  section { margin-top: clamp(3.2rem, 8vw, 5.5rem); }
+
+  .sechead {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.9rem;
+  }
+  .sechead h2 {
+    font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-weight: 600;
+    font-size: var(--step-2);
+    letter-spacing: -.025em;
+    white-space: nowrap;
+  }
+  .sechead .line {
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .9s cubic-bezier(.22,.61,.36,1) .12s;
+  }
+  .sechead.in .line { transform: scaleX(1); }
+  .sechead .label { white-space: nowrap; }
+
+  /* ============ cases ============ */
+  .cases { display: grid; gap: 1rem; }
+
+  .case {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow .3s ease, transform .3s ease, border-color .3s ease;
+  }
+  .case::before {
+    content: "";
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(var(--accent), var(--accent-2));
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .4s cubic-bezier(.22,.61,.36,1);
+  }
+  .case:hover, .case:focus-within {
+    box-shadow: var(--shadow-lift);
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--rule));
+  }
+  .case:hover::before, .case:focus-within::before, .case.open::before { transform: scaleY(1); }
+
+  .case-head {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    padding: 1.4rem clamp(1.15rem, 3vw, 1.9rem);
+    display: grid;
+    gap: .55rem;
+  }
+  .case-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .45rem .7rem;
+  }
+  .chip {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--step--2);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .22rem .55rem;
+    border-radius: 5px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .chip.plain { background: var(--surface-2); color: var(--muted); }
+
+  .case-title {
+    font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-size: var(--step-1);
+    font-weight: 600;
+    line-height: 1.28;
+    letter-spacing: -.017em;
+    transition: color .2s ease;
+  }
+  .case-head:hover .case-title, .case.open .case-title { color: var(--accent); }
+  .case-sub { color: var(--muted); max-width: var(--measure); }
+
+  .toggle {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--step--1);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+  }
+  .toggle .caret {
+    display: inline-block;
+    transition: transform .35s cubic-bezier(.22,.61,.36,1);
+  }
+  .case.open .toggle .caret { transform: rotate(180deg); }
+  .case.open .toggle .more { display: none; }
+  .case:not(.open) .toggle .less { display: none; }
+
+  .case-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .5s cubic-bezier(.22,.61,.36,1);
+  }
+  .case.open .case-panel { grid-template-rows: 1fr; }
+  .case-panel > div { overflow: hidden; }
+
+  .case-body {
+    margin: 0 clamp(1.15rem, 3vw, 1.9rem);
+    padding: 1.3rem 0 1.7rem;
+    border-top: 1px solid var(--rule-soft);
+    display: grid;
+    gap: 1.15rem;
+  }
+  .block { display: grid; gap: .4rem; }
+  .block p, .block ul { max-width: var(--measure); color: var(--ink-soft); }
+  .block ul { margin: 0; padding-left: 1.15rem; }
+  .block li { margin-bottom: .32rem; }
+  .block li::marker { color: var(--accent); }
+
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--step--1);
+    color: var(--muted);
+  }
+  .stack span {
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    padding: .14rem .5rem;
+  }
+
+  /* ============ coverage map ============ */
+  /* 10 items — only 5 / 2 / 1 columns divide evenly, so no row is ever ragged */
+  .coverage {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  @media (max-width: 62rem) {
+    .coverage { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 30rem) {
+    .coverage { grid-template-columns: 1fr; }
+  }
+  .cell {
+    background: var(--surface);
+    padding: .9rem 1rem;
+    display: grid;
+    gap: .3rem;
+    align-content: start;
+    opacity: 0;
+    transform: scale(.97);
+    transition: opacity .5s ease, transform .5s ease, background .25s ease;
+    transition-delay: var(--d, 0ms);
+  }
+  .coverage.in .cell { opacity: 1; transform: none; }
+  .cell:hover { background: var(--surface-2); }
+  .cell .n {
+    font-size: .92rem;
+    font-weight: 500;
+    line-height: 1.32;
+    text-wrap: balance;
+    min-width: 0;
+  }
+  .cell .r {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--step--2);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--faint);
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+  }
+  .cell .r::before {
+    content: "";
+    width: .42rem; height: .42rem;
+    border-radius: 2px;
+    background: var(--faint);
+  }
+  .cell.own .r { color: var(--accent); }
+  .cell.own .r::before { background: var(--accent); }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.3rem;
+    margin-top: .9rem;
+  }
+
+  /* ============ timeline ============ */
+  .roles { display: grid; position: relative; }
+  .role {
+    display: grid;
+    grid-template-columns: 11.5rem 1fr;
+    gap: 0 1.9rem;
+    padding: 1.35rem 0;
+    border-top: 1px solid var(--rule);
+    position: relative;
+  }
+  .role:last-child { border-bottom: 1px solid var(--rule); }
+  .role::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: -1px;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .8s cubic-bezier(.22,.61,.36,1);
+    transition-delay: var(--d, 0ms);
+  }
+  .roles.in .role::after { transform: scaleX(1); }
+  .role .when {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--step--1);
+    color: var(--faint);
+    font-variant-numeric: tabular-nums;
+    padding-top: .28rem;
+  }
+  .role h3 {
+    font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-size: var(--step-0);
+    font-weight: 600;
+    letter-spacing: -.012em;
+  }
+  .role .org { color: var(--accent); font-weight: 500; }
+  .role p { margin-top: .35rem; color: var(--muted); max-width: var(--measure); }
+  .role .sub {
+    margin-top: .5rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--step--1);
+    color: var(--faint);
+  }
+  @media (max-width: 46rem) {
+    .role { grid-template-columns: 1fr; gap: .3rem; }
+    .role .when { padding-top: 0; }
+  }
+
+  /* ============ skills ============ */
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .skill {
+    background: var(--surface);
+    padding: 1.15rem 1.25rem;
+    display: grid;
+    gap: .5rem;
+    align-content: start;
+    transition: background .25s ease;
+  }
+  .skill:hover { background: var(--surface-2); }
+  .skill p { color: var(--ink-soft); font-size: .95rem; }
+
+  /* ============ approach ============ */
+  .approach {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+    gap: 1.4rem 1.8rem;
+  }
+  .note { position: relative; padding-left: 1.15rem; }
+  .note::before {
+    content: "";
+    position: absolute; left: 0; top: .35rem; bottom: .2rem;
+    width: 2px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .6s cubic-bezier(.22,.61,.36,1);
+    transition-delay: var(--d, 0ms);
+  }
+  .approach.in .note::before { transform: scaleY(1); }
+  .note h3 {
+    font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-size: var(--step-0);
+    font-weight: 600;
+    letter-spacing: -.012em;
+    margin-bottom: .3rem;
+  }
+  .note p { color: var(--muted); }
+
+  /* ============ footer ============ */
+  footer {
+    margin-top: clamp(3.5rem, 8vw, 6rem);
+    padding-top: 1.7rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .7rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: var(--step--1);
+    color: var(--faint);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .001ms !important;
+    }
+    .rv { opacity: 1; transform: none; }
+    h1 span i { transform: none; }
+    .lede strong { background-size: 100% 1.5px; }
+  }
+</style>
+
+<style>
+  /* baseline reset — supplied by the host when this page ran as an artifact */
+  html { color-scheme: light dark; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="themebar">
+  <button class="themebtn" id="themebtn" type="button" aria-label="Switch colour theme">Theme</button>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <canvas id="tape" aria-hidden="true"></canvas>
+
+    <div class="eyebrow">
+      <span class="label">Frontend Developer · Tehran, Iran</span>
+      <span class="status"><span class="dot"></span>Open to senior frontend roles</span>
+    </div>
+
+    <h1>
+      <span class="given"><i>Mohsen</i></span>
+      <span class="family"><i>Azar</i></span>
+    </h1>
+
+    <p class="lede">
+      Seven years building web interfaces, the last three inside <strong>Tabdeal</strong> — Iran's largest
+      crypto exchange by trading volume — where I moved from writing the trading screens to owning
+      <strong>Special Margin</strong>, its flagship leveraged-trading product, end to end.
+    </p>
+
+    <nav class="contact" aria-label="Contact">
+      <a href="mailto:mohsenazar6@gmail.com">mohsenazar6@gmail.com</a>
+      <a href="tel:+989129309544">+98 912 930 9544</a>
+      <a href="https://www.linkedin.com/in/mohsen-azar-9410a5181" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </nav>
+
+    <div class="ticker" id="ticker" aria-label="Career figures">
+      <div class="tick" style="--d:0ms">
+        <span class="k">Experience</span>
+        <span class="v"><span data-count="7" data-suffix="+">7+</span> yrs</span>
+      </div>
+      <div class="tick" style="--d:110ms">
+        <span class="k">Platform users</span>
+        <span class="v"><span data-count="7" data-suffix="M+">7M+</span></span>
+      </div>
+      <div class="tick" style="--d:220ms">
+        <span class="k">Trading revenue</span>
+        <span class="v"><span class="arrow">▲</span> ~2×</span>
+      </div>
+      <div class="tick" style="--d:330ms">
+        <span class="k">Browser memory</span>
+        <span class="v"><span class="arrow dn">▼</span> <span data-count="54" data-suffix="%">54%</span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SELECTED WORK ============ -->
+  <section id="work">
+    <div class="sechead rvs">
+      <h2>Selected work</h2>
+      <span class="line"></span>
+      <span class="label">Tabdeal · 2023—now</span>
+    </div>
+
+    <div class="cases">
+
+      <article class="case open rv" style="--d:0ms">
+        <button class="case-head" type="button" aria-expanded="true" aria-controls="p1">
+          <span class="case-meta">
+            <span class="chip">Product ownership</span>
+            <span class="chip plain">Vue 3 · Nuxt 3 · Pinia</span>
+          </span>
+          <span class="case-title">Special Margin: from sole developer to project manager of the product</span>
+          <span class="case-sub">Tabdeal's flagship leveraged-trading product — first implementation, sole ownership, then the cross-functional initiative to make it excellent.</span>
+          <span class="toggle"><span class="caret">↓</span><span class="more">Read the case</span><span class="less">Close</span></span>
+        </button>
+        <div class="case-panel" id="p1"><div>
+          <div class="case-body">
+            <div class="block">
+              <span class="label">Context</span>
+              <p>
+                For my first year I was the only frontend developer on the main Trading screens and Classic
+                Leverage. When Special Margin was conceived, its frontend became mine alone — every order
+                form, position panel, margin calculation and risk indicator on the screen.
+              </p>
+            </div>
+            <div class="block">
+              <span class="label">What I did</span>
+              <ul>
+                <li>Built and maintained the entire Special Margin frontend as its single owner, from first release through every iteration since.</li>
+                <li>Took on project management for the product-excellence initiative — creating, coordinating and tracking every task across backend, design and frontend, and holding the roadmap together.</li>
+                <li>Made the architecture calls for trading-related frontend work, and reviewed every merge touching trading anywhere on the platform.</li>
+                <li>Ran frontend technical interviews alongside the Head of Frontend as the team grew.</li>
+              </ul>
+            </div>
+            <div class="block">
+              <span class="label">Outcome</span>
+              <p>
+                Trading revenue roughly doubled, and the product grew to several thousand active traders
+                inside a 7M+ user base. Leverage is the highest-stakes surface on the platform — a wrong
+                number on screen is a real loss for a real person.
+              </p>
+            </div>
+            <div class="stack">
+              <span>Vue 3</span><span>Nuxt 3</span><span>Pinia</span><span>Tailwind CSS</span><span>WebSocket</span><span>Project management</span>
+            </div>
+          </div>
+        </div></div>
+      </article>
+
+      <article class="case rv" style="--d:80ms">
+        <button class="case-head" type="button" aria-expanded="false" aria-controls="p2">
+          <span class="case-meta">
+            <span class="chip">Real-time UI</span>
+            <span class="chip plain">A first among Iranian exchanges</span>
+          </span>
+          <span class="case-title">Drag-to-adjust take-profit and stop-loss, directly on the chart</span>
+          <span class="case-sub">Traders set their exit prices by dragging lines on the TradingView chart instead of typing numbers into a form.</span>
+          <span class="toggle"><span class="caret">↓</span><span class="more">Read the case</span><span class="less">Close</span></span>
+        </button>
+        <div class="case-panel" id="p2"><div>
+          <div class="case-body">
+            <div class="block">
+              <span class="label">The problem</span>
+              <p>
+                Setting a take-profit or stop-loss meant leaving the chart, reading a number off it, and
+                typing that number into a form — while the price kept moving. The chart is where the
+                decision actually happens; the form was in the way.
+              </p>
+            </div>
+            <div class="block">
+              <span class="label">What I built</span>
+              <ul>
+                <li>Interactive TP/SL lines drawn onto the TradingView chart, draggable in place, with order state staying in sync in both directions.</li>
+                <li>Live reconciliation between the chart, the order form and the incoming WebSocket price stream, so the numbers never disagree mid-drag.</li>
+                <li>Designed and shipped independently — from the interaction idea through to production.</li>
+              </ul>
+            </div>
+            <div class="block">
+              <span class="label">Outcome</span>
+              <p>
+                The first implementation of its kind among exchanges in Iran, and now one of the features
+                users single out when they talk about the platform.
+              </p>
+            </div>
+            <div class="stack">
+              <span>TradingView charting library</span><span>WebSocket</span><span>Vue</span><span>Pointer events</span>
+            </div>
+          </div>
+        </div></div>
+      </article>
+
+      <article class="case rv" style="--d:160ms">
+        <button class="case-head" type="button" aria-expanded="false" aria-controls="p3">
+          <span class="case-meta">
+            <span class="chip">Performance</span>
+            <span class="chip plain">350MB → 162MB</span>
+          </span>
+          <span class="case-title">Cutting browser memory on a page that never stops receiving data</span>
+          <span class="case-sub">A trading screen runs for hours against live price, order-book and chart streams. Memory was the constraint.</span>
+          <span class="toggle"><span class="caret">↓</span><span class="more">Read the case</span><span class="less">Close</span></span>
+        </button>
+        <div class="case-panel" id="p3"><div>
+          <div class="case-body">
+            <div class="block">
+              <span class="label">The problem</span>
+              <p>
+                Traders keep the platform open all day. With continuous WebSocket streams feeding prices,
+                order-book depth and charts, memory climbed steadily through a session and took stability
+                and responsiveness down with it.
+              </p>
+            </div>
+            <div class="block">
+              <span class="label">What I did</span>
+              <ul>
+                <li>Profiled the trading pages and traced the growth back to the JavaScript logic handling high-frequency updates.</li>
+                <li>Reworked that logic — how streamed data is stored, reused and released — rather than patching symptoms.</li>
+                <li>Used AI assistants as part of the profiling and optimization loop across many pages of the platform, with every change verified against a real measurement.</li>
+              </ul>
+            </div>
+            <div class="block">
+              <span class="label">Outcome</span>
+              <p>
+                Browser memory on the affected pages fell from roughly 350MB to 162MB — a 54% reduction —
+                with a matching improvement in stability over long sessions.
+              </p>
+            </div>
+            <div class="stack">
+              <span>JavaScript profiling</span><span>WebSocket</span><span>Memory management</span><span>AI-assisted development</span>
+            </div>
+          </div>
+        </div></div>
+      </article>
+
+      <article class="case rv" style="--d:240ms">
+        <button class="case-head" type="button" aria-expanded="false" aria-controls="p4">
+          <span class="case-meta">
+            <span class="chip">Architecture</span>
+            <span class="chip plain">Design system</span>
+          </span>
+          <span class="case-title">A design system language, and a legacy codebase brought into clean architecture</span>
+          <span class="case-sub">Making a fast-growing platform's frontend consistent to look at and safe to change.</span>
+          <span class="toggle"><span class="caret">↓</span><span class="more">Read the case</span><span class="less">Close</span></span>
+        </button>
+        <div class="case-panel" id="p4"><div>
+          <div class="case-body">
+            <div class="block">
+              <span class="label">Context</span>
+              <p>
+                Years of fast shipping across trading, wallet, KYC, campaigns and the Telegram mini-app had
+                left the frontend inconsistent in appearance and risky to modify.
+              </p>
+            </div>
+            <div class="block">
+              <span class="label">What I did</span>
+              <ul>
+                <li>Led implementation of a Design System Language — shared tokens and components that made the interface consistent and new screens fast to assemble.</li>
+                <li>Refactored legacy code into a modular clean architecture, so responsibilities are separated and changes stay local.</li>
+                <li>Kept accessibility a habit rather than a checklist: semantic HTML, ARIA labels, keyboard navigation, and interface animation that serves the interaction.</li>
+              </ul>
+            </div>
+            <div class="block">
+              <span class="label">Also part of the job</span>
+              <p>
+                Being the person the team asks when a design decision feels wrong or a piece of product copy
+                reads badly — a habit carried over from years of content writing before this career.
+              </p>
+            </div>
+            <div class="stack">
+              <span>Design systems</span><span>Clean architecture</span><span>Code review</span><span>Accessibility</span><span>Technical interviewing</span>
+            </div>
+          </div>
+        </div></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ COVERAGE ============ -->
+  <section id="coverage">
+    <div class="sechead rvs">
+      <h2>Ground covered at Tabdeal</h2>
+      <span class="line"></span>
+    </div>
+
+    <div class="coverage" id="coverage-grid">
+      <div class="cell own" style="--d:0ms"><span class="n">Special Margin</span><span class="r">Sole owner · PM</span></div>
+      <div class="cell own" style="--d:60ms"><span class="n">Main trading</span><span class="r">Sole developer</span></div>
+      <div class="cell own" style="--d:120ms"><span class="n">Classic Leverage</span><span class="r">Sole developer</span></div>
+      <div class="cell" style="--d:180ms"><span class="n">Easy Leverage</span><span class="r">Contributor</span></div>
+      <div class="cell" style="--d:240ms"><span class="n">Wallet</span><span class="r">Contributor</span></div>
+      <div class="cell" style="--d:300ms"><span class="n">Transaction history</span><span class="r">Contributor</span></div>
+      <div class="cell" style="--d:360ms"><span class="n">KYC &amp; authentication</span><span class="r">Contributor</span></div>
+      <div class="cell" style="--d:420ms"><span class="n">Telegram mini-app</span><span class="r">Contributor</span></div>
+      <div class="cell" style="--d:480ms"><span class="n">Campaign pages</span><span class="r">Contributor</span></div>
+      <div class="cell" style="--d:540ms"><span class="n">SEO landing pages</span><span class="r">Contributor</span></div>
+    </div>
+
+    <div class="legend label rv">
+      <span>Owned = sole developer and maintainer</span>
+      <span>Reviewer for every trading-related merge, platform-wide</span>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience">
+    <div class="sechead rvs">
+      <h2>Where I've worked</h2>
+      <span class="line"></span>
+      <span class="label">2019 — now</span>
+    </div>
+
+    <div class="roles" id="roles">
+      <article class="role" style="--d:0ms">
+        <span class="when">Jul 2023 — present</span>
+        <div>
+          <h3>Frontend Developer · <span class="org">Tabdeal Exchange</span></h3>
+          <p>
+            Iran's #1 exchange by trading volume, 7M+ users. Owner of the leverage products, primary code
+            reviewer and architecture decision-maker for trading, and interviewer for frontend hires.
+          </p>
+          <p class="sub">Vue 2/3 · Nuxt 2/3 · Pinia · Vuex · Vue Router · Tailwind CSS · WebSocket</p>
+        </div>
+      </article>
+
+      <article class="role" style="--d:100ms">
+        <span class="when">Sep 2021 — Jul 2023</span>
+        <div>
+          <h3>Frontend Developer · <span class="org">International Complex of Tehran Tandis</span></h3>
+          <p>
+            Second frontend engineer after the Lead, overseeing three developers including onboarding and
+            interviews, while leading frontend for internal systems — ITSMS, ticketing, reporting, asset
+            management, user management, SSO and real estate — and building responsive, data-intensive
+            dashboards.
+          </p>
+          <p class="sub">Vue.js · Bootstrap-Vue · Chart.js · Axios</p>
+        </div>
+      </article>
+
+      <article class="role" style="--d:200ms">
+        <span class="when">Jun 2020 — Sep 2021</span>
+        <div>
+          <h3>Frontend Developer · <span class="org">IRMALL — Online Shop</span></h3>
+          <p>
+            Sole frontend developer for an e-commerce platform and its CMS admin panel, owning the full
+            cycle from architecture through deployment.
+          </p>
+          <p class="sub">Nuxt.js · Vue.js</p>
+        </div>
+      </article>
+
+      <article class="role" style="--d:300ms">
+        <span class="when">2019 — 2020</span>
+        <div>
+          <h3>Frontend Developer · <span class="org">MATYN</span></h3>
+          <p>
+            Where the Vue.js foundations were built: a full-featured online grocery store and its CMS, from
+            the ground up.
+          </p>
+          <p class="sub">Nuxt.js · Vue.js</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <div class="sechead rvs">
+      <h2>What I work with</h2>
+      <span class="line"></span>
+    </div>
+
+    <div class="skills rv">
+      <div class="skill">
+        <span class="label">Core</span>
+        <p>Vue 2 / 3 and the Composition API, Nuxt 2 / 3, JavaScript (ES6+), HTML5, CSS3.</p>
+      </div>
+      <div class="skill">
+        <span class="label">Real-time data</span>
+        <p>WebSocket streams for prices, order books and charts. REST APIs, GraphQL, Axios.</p>
+      </div>
+      <div class="skill">
+        <span class="label">State &amp; styling</span>
+        <p>Pinia, Vuex. Tailwind CSS, Sass/SCSS, Less, Bootstrap, Bootstrap-Vue.</p>
+      </div>
+      <div class="skill">
+        <span class="label">UI, animation &amp; accessibility</span>
+        <p>Semantic HTML, ARIA labels, keyboard navigation, CSS and JS animation, responsive design.</p>
+      </div>
+      <div class="skill">
+        <span class="label">Architecture &amp; practice</span>
+        <p>Clean architecture, design systems, code review, Agile/Scrum, technical interviewing, Git, Docker.</p>
+      </div>
+      <div class="skill">
+        <span class="label">Working knowledge</span>
+        <p>React, Next.js (production maintenance), TypeScript, Vite, Webpack, Jest, Redux, Antd, MUI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APPROACH ============ -->
+  <section id="approach">
+    <div class="sechead rvs">
+      <h2>How I work</h2>
+      <span class="line"></span>
+    </div>
+
+    <div class="approach" id="approach-grid">
+      <div class="note" style="--d:0ms">
+        <h3>I own the thing, not the ticket</h3>
+        <p>
+          Special Margin went from a feature I was assigned to a product I ran. Ownership meant the roadmap
+          and the coordination across three teams, not only the code.
+        </p>
+      </div>
+      <div class="note" style="--d:90ms">
+        <h3>AI as leverage, verified</h3>
+        <p>
+          I use AI assistants deliberately — profiling and optimizing performance across the platform, and
+          writing Django hotfixes so a small backend dependency doesn't hold up a release. Every result gets
+          checked against a measurement.
+        </p>
+      </div>
+      <div class="note" style="--d:180ms">
+        <h3>Design and copy are part of frontend</h3>
+        <p>
+          Coming from a content-writing background, I'm the person the team asks about an interaction that
+          feels wrong or a sentence that reads badly. I'd rather raise it than ship it.
+        </p>
+      </div>
+      <div class="note" style="--d:270ms">
+        <h3>Numbers on screen are somebody's money</h3>
+        <p>
+          Leveraged trading leaves no room for a rounding error or a stale price. That standard shapes how I
+          test, review and refactor.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education">
+    <div class="sechead rvs">
+      <h2>Education &amp; languages</h2>
+      <span class="line"></span>
+    </div>
+    <div class="roles" id="edu">
+      <article class="role" style="--d:0ms">
+        <span class="when">2019</span>
+        <div>
+          <h3>Web Design Pack · <span class="org">Tehran Institute of Technology</span></h3>
+          <p>Official certificate — the start of the switch into software.</p>
+        </div>
+      </article>
+      <article class="role" style="--d:90ms">
+        <span class="when">2017</span>
+        <div>
+          <h3>Master's in Architectural Engineering · <span class="org">Azad University, Semnan</span></h3>
+          <p>Where the habit of thinking in structures and systems came from.</p>
+        </div>
+      </article>
+      <article class="role" style="--d:180ms">
+        <span class="when">Languages</span>
+        <div>
+          <h3>Persian <span class="org">native</span> · English <span class="org">intermediate</span></h3>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <span>Mohsen Azar · Frontend Developer · Tehran, Iran</span>
+    <span><a href="mailto:mohsenazar6@gmail.com">mohsenazar6@gmail.com</a></span>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var root = document.documentElement;
+
+  /* ---------- theme toggle ---------- */
+  var btn = document.getElementById("themebtn");
+  function currentIsDark() {
+    var set = root.getAttribute("data-theme");
+    if (set) return set === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  function syncLabel() {
+    btn.textContent = currentIsDark() ? "Light" : "Dark";
+  }
+  syncLabel();
+  btn.addEventListener("click", function () {
+    root.setAttribute("data-theme", currentIsDark() ? "light" : "dark");
+    syncLabel();
+    drawStatic();
+  });
+
+  /* ---------- accordion ---------- */
+  document.querySelectorAll(".case-head").forEach(function (head) {
+    head.addEventListener("click", function () {
+      var card = head.closest(".case");
+      var open = card.classList.toggle("open");
+      head.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+
+  /* ---------- reveal ---------- */
+  var revealTargets = [];
+  document.querySelectorAll(".rv").forEach(function (el) { revealTargets.push([el, "in"]); });
+  document.querySelectorAll(".rvs").forEach(function (el) { revealTargets.push([el, "in"]); });
+  ["ticker", "coverage-grid", "roles", "edu", "approach-grid"].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) revealTargets.push([el, "in"]);
+  });
+
+  if (reduce || !("IntersectionObserver" in window)) {
+    revealTargets.forEach(function (p) { p[0].classList.add(p[1]); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    revealTargets.forEach(function (p) { io.observe(p[0]); });
+  }
+
+  /* ---------- count up ---------- */
+  function runCounts() {
+    document.querySelectorAll("[data-count]").forEach(function (el) {
+      var target = parseFloat(el.getAttribute("data-count"));
+      var suffix = el.getAttribute("data-suffix") || "";
+      if (reduce) { el.textContent = target + suffix; return; }
+      var start = null, dur = 1100;
+      el.textContent = "0";
+      function step(ts) {
+        if (start === null) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased) + (p === 1 ? suffix : "");
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var tickerEl = document.getElementById("ticker");
+  if (reduce || !("IntersectionObserver" in window)) {
+    runCounts();
+  } else {
+    var cio = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { runCounts(); cio.disconnect(); }
+    }, { threshold: 0.4 });
+    cio.observe(tickerEl);
+  }
+
+  /* ---------- ambient price tape ---------- */
+  var cv = document.getElementById("tape");
+  var ctx = cv.getContext("2d");
+  var W = 0, H = 0, dpr = 1;
+  var pts = [];
+  var STEP = 9;            // px between samples
+  var SPEED = 11.2;        // px per second
+  var price = 0;           // random-walk value, -1..1
+  var offset = 0;          // sub-pixel scroll position between samples
+  var lastTs = 0;
+  var raf = null;
+
+  function css(name) {
+    return getComputedStyle(root).getPropertyValue(name).trim();
+  }
+
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = cv.clientWidth;
+    H = cv.clientHeight;
+    cv.width = Math.floor(W * dpr);
+    cv.height = Math.floor(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var need = Math.ceil(W / STEP) + 3;
+    while (pts.length < need) pts.unshift(seed());
+    while (pts.length > need) pts.shift();
+  }
+
+  function seed() {
+    price += (Math.random() - 0.5) * 0.20;
+    price = Math.max(-1, Math.min(1, price * 0.985));
+    return price;
+  }
+
+  function paint() {
+    var accent = css("--accent") || "#A0601F";
+    var gridC = css("--grid") || "rgba(0,0,0,.05)";
+    ctx.clearRect(0, 0, W, H);
+
+    /* faint measurement grid */
+    ctx.strokeStyle = gridC;
+    ctx.lineWidth = 1;
+    var gy = H / 6;
+    for (var i = 1; i < 6; i++) {
+      ctx.beginPath();
+      ctx.moveTo(0, Math.round(gy * i) + .5);
+      ctx.lineTo(W, Math.round(gy * i) + .5);
+      ctx.stroke();
+    }
+    var gx = 120;
+    for (var x = 0; x < W; x += gx) {
+      ctx.beginPath();
+      ctx.moveTo(Math.round(x) + .5, 0);
+      ctx.lineTo(Math.round(x) + .5, H);
+      ctx.stroke();
+    }
+
+    /* the line — shifted by the sub-pixel offset so it glides, never steps */
+    var mid = H * 0.52;
+    var amp = Math.min(H * 0.26, 120);
+    ctx.beginPath();
+    for (var j = 0; j < pts.length; j++) {
+      var px = j * STEP - offset;
+      var py = mid - pts[j] * amp;
+      if (j === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    }
+    ctx.strokeStyle = accent;
+    ctx.globalAlpha = 0.30;
+    ctx.lineWidth = 1.4;
+    ctx.lineJoin = "round";
+    ctx.stroke();
+
+    /* area under the line */
+    ctx.lineTo((pts.length - 1) * STEP - offset, H);
+    ctx.lineTo(-offset, H);
+    ctx.closePath();
+    var g = ctx.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, accent);
+    g.addColorStop(1, "transparent");
+    ctx.globalAlpha = 0.07;
+    ctx.fillStyle = g;
+    ctx.fill();
+    ctx.globalAlpha = 1;
+  }
+
+  function drawStatic() { if (W) paint(); }
+
+  function frame(ts) {
+    if (!lastTs) lastTs = ts;
+    var dt = Math.min((ts - lastTs) / 1000, 0.1);
+    lastTs = ts;
+
+    offset += SPEED * dt;
+    while (offset >= STEP) {
+      offset -= STEP;
+      pts.push(seed());
+      pts.shift();
+    }
+    paint();
+    raf = requestAnimationFrame(frame);
+  }
+
+  function start() {
+    if (raf) return;
+    lastTs = 0;
+    raf = requestAnimationFrame(frame);
+  }
+
+  function boot() {
+    resize();
+    if (reduce) { paint(); return; }
+    start();
+  }
+
+  var rt = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(rt);
+    rt = setTimeout(function () { resize(); paint(); }, 150);
+  });
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(boot);
+  } else {
+    boot();
+  }
+
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      if (raf) cancelAnimationFrame(raf);
+      raf = null;
+    } else if (!reduce) {
+      start();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
